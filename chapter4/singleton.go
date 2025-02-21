@@ -25,15 +25,15 @@ func (l *Logger) Output(content string) {
 
 type Test struct{}
 
-func main() {
-	test1 := &Test{}
-	test2 := &Test{}
-	fmt.Println("Testクラス: ", test1 == test2)
+// func main() {
+// 	test1 := &Test{}
+// 	test2 := &Test{}
+// 	fmt.Println("Testクラス: ", test1 == test2)
 
-	logger1 := GetLoggerInstance()
-	logger2 := GetLoggerInstance()
-	fmt.Println("Loggerクラス: ", logger1 == logger2)
+// 	logger1 := GetLoggerInstance()
+// 	logger2 := GetLoggerInstance()
+// 	fmt.Println("Loggerクラス: ", logger1 == logger2)
 
-	logger1.Output("logger1のクラス")
-	logger2.Output("logger2のクラス")
-}
+// 	logger1.Output("logger1のクラス")
+// 	logger2.Output("logger2のクラス")
+// }
