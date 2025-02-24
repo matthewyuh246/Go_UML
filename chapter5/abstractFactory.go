@@ -66,7 +66,7 @@ func run(factory GUIFactory) {
 	checkbox.Switch()
 }
 
-func main() {
-	run(WindowsGUIFactory{})
-	run(MacGUIFactory{})
-}
+// func main() {
+// 	run(WindowsGUIFactory{})
+// 	run(MacGUIFactory{})
+// }
