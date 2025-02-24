@@ -100,39 +100,39 @@ func (im *ItemManager) Create(key string) (Item, error) {
 	return item.CreateCopy(), nil
 }
 
-func main() {
-	mouse := NewDeepCopyItem("マウス")
-	mouse.AddComment("original")
+// func main() {
+// 	mouse := NewDeepCopyItem("マウス")
+// 	mouse.AddComment("original")
 
-	keyboard := NewShallowCopyItem("キーボード")
-	keyboard.AddComment("original")
+// 	keyboard := NewShallowCopyItem("キーボード")
+// 	keyboard.AddComment("original")
 
-	manager := NewItemManager()
-	manager.RegisterItem("mouse", mouse)
-	manager.RegisterItem("keyboard", keyboard)
+// 	manager := NewItemManager()
+// 	manager.RegisterItem("mouse", mouse)
+// 	manager.RegisterItem("keyboard", keyboard)
 
-	clonedMouse, err := manager.Create("mouse")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	clonedKeyboard, err := manager.Create("keyboard")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+// 	clonedMouse, err := manager.Create("mouse")
+// 	if err != nil {
+// 		fmt.Println(err)
+// 		return
+// 	}
+// 	clonedKeyboard, err := manager.Create("keyboard")
+// 	if err != nil {
+// 		fmt.Println(err)
+// 		return
+// 	}
 
-	fmt.Printf("マウス（オリジナル）: Name=%s, Comments=%v\n", mouse.Name, mouse.Detail.Comment)
-	fmt.Printf("マウス（コピー）: Name=%s, Comments=%v\n", clonedMouse.GetName(), clonedMouse.GetDetail().Comment)
-	fmt.Printf("キーボード（オリジナル）: Name=%s, Comments=%v\n", keyboard.Name, keyboard.Detail.Comment)
-	fmt.Printf("キーボード（コピー）: Name=%s, Comments=%v\n", clonedKeyboard.GetName(), clonedKeyboard.GetDetail().Comment)
+// 	fmt.Printf("マウス（オリジナル）: Name=%s, Comments=%v\n", mouse.Name, mouse.Detail.Comment)
+// 	fmt.Printf("マウス（コピー）: Name=%s, Comments=%v\n", clonedMouse.GetName(), clonedMouse.GetDetail().Comment)
+// 	fmt.Printf("キーボード（オリジナル）: Name=%s, Comments=%v\n", keyboard.Name, keyboard.Detail.Comment)
+// 	fmt.Printf("キーボード（コピー）: Name=%s, Comments=%v\n", clonedKeyboard.GetName(), clonedKeyboard.GetDetail().Comment)
 
-	clonedMouse.AddComment("Good")
-	clonedKeyboard.AddComment("SoSo")
+// 	clonedMouse.AddComment("Good")
+// 	clonedKeyboard.AddComment("SoSo")
 
-	fmt.Println("")
-	fmt.Printf("マウス（オリジナル）: Name=%s, Comments=%v\n", mouse.Name, mouse.Detail.Comment)
-	fmt.Printf("マウス（コピー）: Name=%s, Comments=%v\n", clonedMouse.GetName(), clonedMouse.GetDetail().Comment)
-	fmt.Printf("キーボード（オリジナル）: Name=%s, Comments=%v\n", keyboard.Name, keyboard.Detail.Comment)
-	fmt.Printf("キーボード（コピー）: Name=%s, Comments=%v\n", clonedKeyboard.GetName(), clonedKeyboard.GetDetail().Comment)
-}
+// 	fmt.Println("")
+// 	fmt.Printf("マウス（オリジナル）: Name=%s, Comments=%v\n", mouse.Name, mouse.Detail.Comment)
+// 	fmt.Printf("マウス（コピー）: Name=%s, Comments=%v\n", clonedMouse.GetName(), clonedMouse.GetDetail().Comment)
+// 	fmt.Printf("キーボード（オリジナル）: Name=%s, Comments=%v\n", keyboard.Name, keyboard.Detail.Comment)
+// 	fmt.Printf("キーボード（コピー）: Name=%s, Comments=%v\n", clonedKeyboard.GetName(), clonedKeyboard.GetDetail().Comment)
+// }
