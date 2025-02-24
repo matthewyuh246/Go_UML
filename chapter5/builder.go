@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 type Computer struct {
 	Type string
@@ -81,16 +81,16 @@ func (d *Director) highSpecConstruct() {
 	d.builder.AddRam(64)
 }
 
-func main() {
-	desktopBuilder := NewDesktopBuilder()
-	desktopDirector := NewDirector(desktopBuilder)
-	desktopDirector.construct()
-	desktopComputer := desktopBuilder.getResult()
-	fmt.Println(desktopComputer)
+// func main() {
+// 	desktopBuilder := NewDesktopBuilder()
+// 	desktopDirector := NewDirector(desktopBuilder)
+// 	desktopDirector.construct()
+// 	desktopComputer := desktopBuilder.getResult()
+// 	fmt.Println(desktopComputer)
 
-	laptopBuilder := NewLaptopBuilder()
-	laptopDirector := NewDirector(laptopBuilder)
-	laptopDirector.highSpecConstruct()
-	laptopComputer := laptopBuilder.getResult()
-	fmt.Println(laptopComputer)
-}
+// 	laptopBuilder := NewLaptopBuilder()
+// 	laptopDirector := NewDirector(laptopBuilder)
+// 	laptopDirector.highSpecConstruct()
+// 	laptopComputer := laptopBuilder.getResult()
+// 	fmt.Println(laptopComputer)
+// }
