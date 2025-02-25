@@ -49,13 +49,13 @@ func (sc *SortContext) sort(list []int) []int {
 	return sc.strategy.sort(list)
 }
 
-func main() {
-	list := []int{2, 5, 1, 8, 7, 3}
-	b := BubbleSort{}
-	context1 := SortContext{b}
-	fmt.Println(context1.sort(list))
-	i := InsertionSort{}
-	context2 := SortContext{i}
-	fmt.Println(context2.sort(list))
+// func main() {
+// 	list := []int{2, 5, 1, 8, 7, 3}
+// 	b := BubbleSort{}
+// 	context1 := SortContext{b}
+// 	fmt.Println(context1.sort(list))
+// 	i := InsertionSort{}
+// 	context2 := SortContext{i}
+// 	fmt.Println(context2.sort(list))
 
-}
+// }
