@@ -58,12 +58,12 @@ func (u *User) switchState() {
 	u.state = u.state.nextState()
 }
 
-func main() {
-	user := NewUser()
-	fmt.Println(user.isAuthenticated())
-	user.displayPage()
+// func main() {
+// 	user := NewUser()
+// 	fmt.Println(user.isAuthenticated())
+// 	user.displayPage()
 
-	user.switchState()
-	fmt.Println(user.isAuthenticated())
-	user.displayPage()
-}
+// 	user.switchState()
+// 	fmt.Println(user.isAuthenticated())
+// 	user.displayPage()
+// }
