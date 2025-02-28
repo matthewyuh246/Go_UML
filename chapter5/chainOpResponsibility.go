@@ -97,16 +97,16 @@ func (m *MinLengthValidationHandler) Validate(input string) bool {
 	}
 }
 
-func main() {
-	notNullHandler := &NotNullValidationHandler{}
-	alphabetHandler := &AlphabetValidationHandler{}
-	minLengthHandler := &MinLengthValidationHandler{}
+// func main() {
+// 	notNullHandler := &NotNullValidationHandler{}
+// 	alphabetHandler := &AlphabetValidationHandler{}
+// 	minLengthHandler := &MinLengthValidationHandler{}
 
-	notNullHandler.SetNext(alphabetHandler)
-	alphabetHandler.SetNext(minLengthHandler)
+// 	notNullHandler.SetNext(alphabetHandler)
+// 	alphabetHandler.SetNext(minLengthHandler)
 
-	result := notNullHandler.Validate("hellowworld")
-	if result {
-		fmt.Println("すべてのバリデーションに成功")
-	}
-}
+// 	result := notNullHandler.Validate("hellowworld")
+// 	if result {
+// 		fmt.Println("すべてのバリデーションに成功")
+// 	}
+// }
