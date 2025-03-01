@@ -33,12 +33,12 @@ func (ld LogLevelDecorator) GetLogMessage(msg string) string {
 	return ld.component.GetLogMessage(fmt.Sprintf("%s %s", ld.logLevel, msg))
 }
 
-func main() {
-	logger := Logger{}
-	loglevel := LogLevelDecorator{component: logger, logLevel: "INFO"}
-	timestamp := TimestampDecorator{component: loglevel}
+// func main() {
+// 	logger := Logger{}
+// 	loglevel := LogLevelDecorator{component: logger, logLevel: "INFO"}
+// 	timestamp := TimestampDecorator{component: loglevel}
 
-	fmt.Println(logger.GetLogMessage("Design Pattern"))
-	fmt.Println(loglevel.GetLogMessage("Design Pattern"))
-	fmt.Println(timestamp.GetLogMessage("Design Pattern"))
-}
+// 	fmt.Println(logger.GetLogMessage("Design Pattern"))
+// 	fmt.Println(loglevel.GetLogMessage("Design Pattern"))
+// 	fmt.Println(timestamp.GetLogMessage("Design Pattern"))
+// }
