@@ -47,9 +47,9 @@ func (p *Proxy) handle(userId string) {
 	fmt.Println("処理が終了しました")
 }
 
-func main() {
-	server := NewRealServer()
-	proxy := NewProxy(server)
+// func main() {
+// 	server := NewRealServer()
+// 	proxy := NewProxy(server)
 
-	proxy.handle("2")
-}
+// 	proxy.handle("2")
+// }
