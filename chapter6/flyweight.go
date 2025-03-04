@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-type IStamp interface {
-	print()
-}
-
 type Stamp struct {
 	char string
 }
@@ -38,19 +34,19 @@ func (sf *StampFactory) GetPool() map[string]*Stamp {
 	return sf.pool
 }
 
-func main() {
-	factory := NewStampFactory()
-	stamp1 := factory.getStamp("し")
-	stamp2 := factory.getStamp("ん")
-	stamp3 := factory.getStamp("ぶ")
-	stamp4 := factory.getStamp("ん")
-	stamp5 := factory.getStamp("し")
+// func main() {
+// 	factory := NewStampFactory()
+// 	stamp1 := factory.getStamp("し")
+// 	stamp2 := factory.getStamp("ん")
+// 	stamp3 := factory.getStamp("ぶ")
+// 	stamp4 := factory.getStamp("ん")
+// 	stamp5 := factory.getStamp("し")
 
-	stamp1.print()
-	stamp2.print()
-	stamp3.print()
-	stamp4.print()
-	stamp5.print()
+// 	stamp1.print()
+// 	stamp2.print()
+// 	stamp3.print()
+// 	stamp4.print()
+// 	stamp5.print()
 
-	fmt.Println(factory.GetPool())
-}
+// 	fmt.Println(factory.GetPool())
+// }
