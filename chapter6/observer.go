@@ -67,13 +67,13 @@ func (t *TvGameSubject) Restock() {
 	t.Notify()
 }
 
-func main() {
-	store := StoreObserver{}
-	personal := PersonalObserver{}
-	tvGame := NewTvGameSubject("New RPG Game")
+// func main() {
+// 	store := StoreObserver{}
+// 	personal := PersonalObserver{}
+// 	tvGame := NewTvGameSubject("New RPG Game")
 
-	tvGame.Attach(store)
-	tvGame.Attach(personal)
+// 	tvGame.Attach(store)
+// 	tvGame.Attach(personal)
 
-	tvGame.Restock()
-}
+// 	tvGame.Restock()
+// }
