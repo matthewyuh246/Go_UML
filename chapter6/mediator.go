@@ -55,17 +55,17 @@ func (cu *ChatUser) receive(msg string) {
 	fmt.Printf("%s -> メッセージ受信: %s\n", cu.name, msg)
 }
 
-func main() {
-	chatRoom := NewChatRoom()
+// func main() {
+// 	chatRoom := NewChatRoom()
 
-	yamada := NewChatUser(chatRoom, "yamada")
-	suzuki := NewChatUser(chatRoom, "suzuki")
-	tanaka := NewChatUser(chatRoom, "tanaka")
+// 	yamada := NewChatUser(chatRoom, "yamada")
+// 	suzuki := NewChatUser(chatRoom, "suzuki")
+// 	tanaka := NewChatUser(chatRoom, "tanaka")
 
-	chatRoom.registerUser(yamada)
-	chatRoom.registerUser(suzuki)
-	chatRoom.registerUser(tanaka)
+// 	chatRoom.registerUser(yamada)
+// 	chatRoom.registerUser(suzuki)
+// 	chatRoom.registerUser(tanaka)
 
-	yamada.send("こんにちは")
-	tanaka.send("ヤッホー")
-}
+// 	yamada.send("こんにちは")
+// 	tanaka.send("ヤッホー")
+// }
