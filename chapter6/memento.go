@@ -82,32 +82,32 @@ func (c *Caretaker) ShowHistory() {
 	}
 }
 
-func main() {
-	notepad := NewNotepad("first memo")
-	caretaker := NewCaretaker(notepad)
+// func main() {
+// 	notepad := NewNotepad("first memo")
+// 	caretaker := NewCaretaker(notepad)
 
-	caretaker.Backup()
+// 	caretaker.Backup()
 
-	notepad.AddMemo("second memo")
-	caretaker.Backup()
-	notepad.AddMemo("third memo")
-	caretaker.Backup()
+// 	notepad.AddMemo("second memo")
+// 	caretaker.Backup()
+// 	notepad.AddMemo("third memo")
+// 	caretaker.Backup()
 
-	// 現在の状態を表示
-	fmt.Println(notepad.GetMemo())
-	caretaker.ShowHistory()
+// 	// 現在の状態を表示
+// 	fmt.Println(notepad.GetMemo())
+// 	caretaker.ShowHistory()
 
-	fmt.Println("")
-	// Undo 操作で状態を復元
-	caretaker.Undo()
-	fmt.Println(notepad.GetMemo())
-	caretaker.Undo()
-	fmt.Println(notepad.GetMemo())
-	caretaker.Undo()
-	fmt.Println(notepad.GetMemo())
-	// さらに Undo を試みる（履歴が空の場合は状態は変わらない）
-	caretaker.Undo()
-	fmt.Println(notepad.GetMemo())
+// 	fmt.Println("")
+// 	// Undo 操作で状態を復元
+// 	caretaker.Undo()
+// 	fmt.Println(notepad.GetMemo())
+// 	caretaker.Undo()
+// 	fmt.Println(notepad.GetMemo())
+// 	caretaker.Undo()
+// 	fmt.Println(notepad.GetMemo())
+// 	// さらに Undo を試みる（履歴が空の場合は状態は変わらない）
+// 	caretaker.Undo()
+// 	fmt.Println(notepad.GetMemo())
 
-	caretaker.ShowHistory()
-}
+// 	caretaker.ShowHistory()
+// }
