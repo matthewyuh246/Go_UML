@@ -82,13 +82,13 @@ func (q *Queue) executeCommand() {
 	}
 }
 
-func main() {
-	file := NewFile("command.ts")
-	queue := NewQueue()
+// func main() {
+// 	file := NewFile("command.ts")
+// 	queue := NewQueue()
 
-	queue.addCommand(NewOpenCommand(file))
-	queue.addCommand(NewCompressCommand(file))
-	queue.addCommand(NewCloseCommand(file))
+// 	queue.addCommand(NewOpenCommand(file))
+// 	queue.addCommand(NewCompressCommand(file))
+// 	queue.addCommand(NewCloseCommand(file))
 
-	queue.executeCommand()
-}
+// 	queue.executeCommand()
+// }
